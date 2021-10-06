@@ -5,7 +5,7 @@ metadata:
   Namespace: ziyotek-ns
   labels:
     ziyotek: devops
-    environment: production
+    environment: test
     image: nginx
 spec:
   containers:
