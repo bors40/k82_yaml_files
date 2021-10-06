@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ziyotekapp
+  Namespace: ziyotek-ns
+  labels:
+    ziyotek: devops
+    environment: production
+    image: nginx
+spec:
+  containers:
+  - name: ziyotekapp
+    image: nginx
+    ports:
+      - containerPort: 80
+    envFrom:
+    - secretRef:
+        name: mydockerhub
