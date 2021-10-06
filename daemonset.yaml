@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: ziyotek-app-deployment
+spec:
+  selector:
+    matchLabels:
+      app: ziyotek-app-deployment
+  template:
+    metadata:
+      labels:
+        app: ziyotek-app-deployment
+        env: demo
+    spec:
+      containers:
+      - name: ziyotek-app-deployment
+        image: nginx
+        ports:
+        - containerPort: 80
